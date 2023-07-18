@@ -16,6 +16,7 @@ A web front-end for supporting interactions with the [AlgoBull contract](https:/
 - [x] Minted UX with a quantity received and scan link.
 - [x] Design should be branded consistently with https://www.algobull.art/
 - [x] Should implement state machine
+
   ![state machine](spec/state-machine.png)
 
 ## To Run it
