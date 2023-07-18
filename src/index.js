@@ -133,8 +133,6 @@ function approve(
     );
     const decimals = await contract.decimals();
     const quantityBig = ethers.utils.parseUnits(quantity + "", decimals);
-    console.log("quantity big", quantityBig.toString());
-    console.log("allowanceBig", allowanceBig.toString());
     if (allowanceBig.gte(quantityBig)) {
       app.ports.approveSucceeded.send("");
     } else {
@@ -156,7 +154,6 @@ function approve(
 }
 
 app.ports.mintRequested.subscribe(async function (quantity) {
-  console.log("mint request hit");
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const { chainId } = await provider.getNetwork();
   if (isSupported(chainId)) {
